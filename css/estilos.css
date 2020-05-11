@@ -1,0 +1,48 @@
+/*Muda a cor do background e o tipo de fonta da pagina*/
+body
+{
+  background: #AAAAAA;
+  font-family: Arial;
+  height: 100vh;
+}
+
+/*Muda a cor do menu do topo da pagina*/
+.menu
+{
+  background-color: #CCCCCC;
+}
+
+/*transforma a lista de linhas em colunas*/
+.menu ul
+{
+  display: flex;
+  justify-content: space-around;
+}
+
+/*Teria os pontos da lista do "menu"*/
+.menu li
+{
+  list-style: none;
+}
+
+/*Retira o underline de links*/
+a
+{
+  color: #333333;
+  text-decoration: none;
+}
+
+/*Adiciona o underline nos links quando passar o mouse por cima deles*/
+a:hover
+{
+  text-decoration: underline;
+}
+
+/*Muda a configuração do texto do titilo e subtitutlo do site*/
+.site-subtitle,
+.site-title
+{
+  color: whitesmoke;
+  text-align: center;
+}
+
