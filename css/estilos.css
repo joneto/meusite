@@ -1,15 +1,59 @@
-/*Muda a cor do background e o tipo de fonta da pagina*/
+/* Reset das configuracoes de margem do HTML*/
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*Muda a cor do background e o tipo de fonte do corpo da pagina*/
 body
 {
-  background: #AAAAAA;
-  font-family: Arial;
+  background:rgb(56, 82, 95);
+  color: whitesmoke;
+  font-family: 'Courier Prime', monospace;
   height: 100vh;
+  font-size: 12;
+}
+
+/*Excecoes de estilo para telas maiores*/
+@media (min-width:400px)
+{
+  body
+  {
+    font-size: 14px;
+  }
+}
+
+@media (min-width:600px)
+{
+  body
+  {
+    font-size: 16px;
+  }
+}
+
+header
+{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*Muda a cor do menu do topo da pagina*/
 .menu
 {
-  background-color: #CCCCCC;
+  background-color: rgba(183, 215, 231, 0.774);;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+}
+
+/*Modifica a exibicao dos links dos menu nav*/
+.menu a
+{
+  padding: 5px 10px;
+  display: block;
 }
 
 /*transforma a lista de linhas em colunas*/
@@ -19,7 +63,7 @@ body
   justify-content: space-around;
 }
 
-/*Teria os pontos da lista do "menu"*/
+/*Tira os pontos da lista do "menu"*/
 .menu li
 {
   list-style: none;
@@ -28,7 +72,7 @@ body
 /*Retira o underline de links*/
 a
 {
-  color: #333333;
+  color: #002c47;
   text-decoration: none;
 }
 
@@ -44,5 +88,63 @@ a:hover
 {
   color: whitesmoke;
   text-align: center;
+  line-height: 2em;
 }
+
+.projeto
+{
+  font-size: 1em;
+  padding: 2em;
+  height: 100vh;
+}
+
+.projeto .grid
+{
+  display: grid;
+  gap: 1em;
+}
+
+@media (min-width: 450px)
+{
+  .projeto .grid
+  {
+    grid-template-columns: repeat(2,180px);
+  } 
+}
+
+@media (min-width: 650px)
+{
+  .projeto .grid
+  {
+    grid-template-columns: repeat(3,180px);
+  } 
+}
+
+@media (min-width: 850px)
+{
+  .projeto .grid
+  {
+    grid-template-columns: repeat(4,200px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 6em - 48px);
+  } 
+}
+
+.projeto figure
+{
+  text-align: center;
+}
+
+.projeto h2
+{
+  margin-bottom: 1.5em;
+  line-height: 2em;
+}
+
+.img-projeto {
+  height: 180px;
+  width: 180px;
+}
+
 
