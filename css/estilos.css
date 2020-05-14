@@ -47,6 +47,7 @@ header
   position: fixed;
   width: 100vw;
   top: 0;
+  z-index: 1;
 }
 
 /*Modifica a exibicao dos links dos menu nav*/
@@ -54,6 +55,13 @@ header
 {
   padding: 5px 10px;
   display: block;
+  transition: background-color 100ms, color 100ms;
+}
+
+.menu a:hover
+{
+  background-color: #002c47;
+  color: whitesmoke;
 }
 
 /*transforma a lista de linhas em colunas*/
@@ -82,6 +90,36 @@ a:hover
   text-decoration: underline;
 }
 
+.titulo-header
+{
+  opacity: 0;
+  /*transition: opacity 500ms;*/
+  animation: linear 2s animationTitulo forwards;
+}
+
+
+@keyframes animationTitulo
+{
+  to
+  {
+    opacity: 1;
+  }
+}
+
+.titulo-header a
+{
+  color: whitesmoke;
+  transition: background-color 100ms, color 100ms;
+}
+
+.titulo-header a:active,
+.titulo-header a:hover
+{
+  color: #002c47;
+  text-decoration: underline;
+  background-color: whitesmoke;
+}
+
 /*Muda a configuração do texto do titilo e subtitutlo do site*/
 .site-subtitle,
 .site-title
@@ -91,11 +129,12 @@ a:hover
   line-height: 2em;
 }
 
+.contato, 
 .projeto
 {
   font-size: 1em;
   padding: 2em;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .projeto .grid
@@ -117,6 +156,9 @@ a:hover
   .projeto .grid
   {
     grid-template-columns: repeat(3,180px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 6em - 48px);
   } 
 }
 
@@ -124,7 +166,7 @@ a:hover
 {
   .projeto .grid
   {
-    grid-template-columns: repeat(4,200px);
+    grid-template-columns: repeat(3,200px);
     justify-content: center;
     align-content: center;
     height: calc(100vh - 6em - 48px);
@@ -136,15 +178,50 @@ a:hover
   text-align: center;
 }
 
+.contato h2, 
 .projeto h2
 {
   margin-bottom: 1.5em;
   line-height: 2em;
 }
 
-.img-projeto {
+.img-projeto 
+{
   height: 180px;
   width: 180px;
+  transform: scale(1);
+  transition: transform 100ms;
 }
 
+
+.img-projeto:hover 
+{
+  transform: scale(1.2);
+}
+
+
+.contato .icons
+{
+  text-align: center;
+}
+
+.contato .img-icon
+{
+  color: whitesmoke;
+  font-size: 4em;
+}
+
+.contato a
+{
+  color: whitesmoke;
+  font-size: 4em;
+  transition: text-shadow 100ms;
+}
+
+.contato a:active,
+.contato a:hover
+{
+  text-decoration: none;
+  text-shadow: 0px 0px 10px rgba(245, 245, 245, 0.5);
+}
 
