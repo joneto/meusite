@@ -68,7 +68,9 @@ header
 .menu ul
 {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding-right: 1em;
+  padding-left: 0.5em;
 }
 
 /*Tira os pontos da lista do "menu"*/
