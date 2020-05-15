@@ -12,7 +12,7 @@
 <body>
     <header id="home">
         <nav class = 'menu'>  
-            <ul>
+            <ul class = 'container'>
               <li><a href ="#home"><i class="fas fa-home"></i></a></li>
               <li><a href ="#sobre">Sobre</a></li>
               <li><a href ="#projeto">Projetos</a></li>
@@ -24,24 +24,88 @@
             <h2 class = "site-subtitle"> Professor - <a target="_blank" href ="https://www.ufpe.br/demec">DEMEC</a> - <a target="_blank" href ="https://www.ufpe.br">UFPE</a></h2>
         </div>
     </header>
-    <section class= "projeto" id="projeto">
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+        <figure class = "avatar">
+            <img src="https://pbs.twimg.com/profile_images/936656225474711552/VZjHzasu_400x400.jpg" alt="José Neto">
+        </figure>
+        <p>Possui graduação em Engenharia Elétrica, modalidade Eletrônica, pela Universidade Federal de Pernambuco - <a target="_blank" href ="https://www.ufpe.br">UFPE</a>, mestrado em Engenharia Elétrica, área de concentração Eletrônica, pelo <a target="_blank" href ="https://www.ufpe.br/ppgee">PPGEE-UFPE</a> e doutorado em Engenharia Elétrica, área de concentração Comunicações, pelo PPGEE-UFPE, com doutorado-sanduíche na <a target="_blank" href ="https://carleton.ca/math/ ">School of Mathematics and Statistics of the Carleton University</a>, Ottawa, Canada (PDSE/CAPES).</p>
+        <p>Atualmente, é professor do Departamento de Engenharia Mecânica (<a target="_blank" href ="https://www.ufpe.br/demec">DEMEC</a>) da UFPE e leciona disciplinas na ênfase de <a target="_blank" href ="https://sites.google.com/view/mecatronicaufpe">Mecatrônica</a>.</p>
+        <p>Seus principais interesses de pesquisa estão no campo do processamento digital de sinais, implementações em hardware e sistemas embarcados.</p>
+        <p>Este site foi construido durante a  <a target="_blank" href="https://www.alura.com.br/imersao-css">Imersão CSS da Alura</a>.</p>
+    </section>
+    <section class= "projeto container" id="projeto">
         <h2>Projetos</h2>
         <div class="grid">
-		    <figure>
-			    <img class="img-projeto" src="./img/ensino3.png" alt="Ensino">
-			<figcaption>Ensino</figcaption>
-		    </figure>
+            <a  onclick="mostrarTexto(1)">
+                <figure>
+			        <img class="img-projeto" src="./img/ensino3.png" alt="Ensino">
+			    <figcaption>Ensino</figcaption>
+                </figure>
+            </a>
+            <a  onclick="mostrarTexto(2)">
 		    <figure>
 			    <img class="img-projeto" src="./img/pesquisa3.png" alt=">Pesquisa">
 			<figcaption>Pesquisa</figcaption>
-		    </figure>
+            </figure>
+            </a>
+            <a  onclick="mostrarTexto(3)">
 		    <figure>
 			<img class="img-projeto" src="./img/extensao3.png" alt="Extensão">
 			<figcaption>Extensão</figcaption>
-		    </figure>
+            </figure>
+            </a>
         </div>
+        <span id="toEnsino">
+        </span>
+        <span id="tcEnsino">
+        <div class="ensino">
+            <h2 class="item">Graduação:</h2>
+            <p><b> 2020.1 - Engenharia Mecânica - Disciplinas:</b></p>
+            <p>
+                <ul class = "subitem">
+                    <li>ME565 - AUTOMAÇÃO INDUSTRIAL</li>
+                    <li>ME587 - SISTEMAS DIGITAIS 2</li>
+                    <li>ME450 - TRABALHO DE CONCLUSÃO DE CURSO 1 - TCC1</li>
+                </ul>                
+            </p>
+            <p><b> 2019.2 - Engenharia Mecânica - Disciplinas:</b></p>
+            <p>
+                <ul class = "subitem">
+                    <li>ME565 - AUTOMAÇÃO INDUSTRIAL</li>
+                    <li>ME575 - SISTEMAS DIGITAIS 1</li>
+                    <li>ME450 - TRABALHO DE CONCLUSÃO DE CURSO 1 - TCC1</li>
+                </ul>                
+            </p>
+            <p><b> 2019.1 - Engenharia Mecânica - Disciplinas:</b></p>
+            <p>
+                <ul class = "subitem">
+                    <li>ME125 - ESTAGIO CURRICULAR</li>
+                    <li>ME587 - SISTEMAS DIGITAIS 2</li>
+                    <li>ME450 - TRABALHO DE CONCLUSÃO DE CURSO 1 - TCC1</li>
+                </ul>                
+            </p>
+            <p>Texto em construção... </p>
+        </div>
+        </span>
+        <span id="toPesquisa">
+        </span>
+        <span id="tcPesquisa">
+            <div class="pesquisa">
+                <h2 class="item">Artigos Puplicados:</h2>
+                <p>Texto em construção...</p>
+            </div>
+        </span>
+        <span id="toExtensao">
+        </span>
+        <span id="tcExtensao">
+            <div class="pesquisa">
+                <h2 class="item">O Maracatronics:</h2>
+                <p>Texto em construção...</p>
+            </div>
+        </span>
     </section>
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
         <h2>Contato</h2>
         <div class="grid icons">
             <a target="_blank" href="http://lattes.cnpq.br/6200149790353238">
@@ -70,5 +134,6 @@
             </a>
         </div>
     </section>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
