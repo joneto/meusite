@@ -108,6 +108,7 @@ a:hover
   }
 }
 
+.extensao a,
 .sobre a, 
 .titulo-header a
 {
@@ -115,6 +116,7 @@ a:hover
   transition: background-color 100ms, color 100ms;
 }
 
+.extensao a:hover,
 .sobre a:hover,
 .titulo-header a:hover
 {
