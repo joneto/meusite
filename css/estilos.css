@@ -209,7 +209,17 @@ a:hover
 {
   margin-bottom: 1em;
   font-size: 1.2em;
+
+}
+
+@media(min-width:500px)
+{
+.projeto p, 
+.sobre p
+{
   text-align: justify;
+}
+
 }
 
 .projeto .grid
